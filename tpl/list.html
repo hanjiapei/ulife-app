@@ -1,0 +1,28 @@
+<div ng-include="'tpl/include/header_back.html'"></div>
+
+<ion-header-bar class="bar-subheader bar-balanced">
+    <div class="row">
+        <div class="col">价格</div>
+        <div class="col">区域</div>
+        <div class="col">面积</div>
+        <div class="col">总价</div>
+        <div class="col">
+            <button ng-click="toggleShow()">切换</button>
+        </div>
+    </div>
+</ion-header-bar>
+
+<ion-content class="content has-header has-subheader has-footer">
+    <!--以列表的形式显示数据-->
+    <div class="list" ng-show="showList">
+        <a href="" class="item" ng-repeat="n in listArray">{{n}}</a>
+    </div>
+    <!--以表格的形式显示数据-->
+    <div ng-hide="showList">
+        <div class="row" ng-repeat="arr in gridArray">
+            <div class="col" ng-repeat="n in arr">{{n}}</div>
+        </div>
+    </div>
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

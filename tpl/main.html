@@ -1,0 +1,70 @@
+<div ng-include="'tpl/include/header.html'"
+        ng-if="showHeader"></div>
+<ion-content class="content has-footer"
+        ng-class="showHeader?'has-header':''"
+        on-scroll="getPosition()">
+    <div id="main_box">
+        <section>
+            <span ng-click="showCityModal()">北京<i class="icon ion-android-arrow-dropdown"></i></span>
+            <button class="icon ion-android-search"></button>
+        </section>
+
+        <!--功能页签-->
+        <article class="row">
+            <div class="col" ng-click="showFuncs(1)">
+                <a class="{{funcIndex == 1?'active':''}}">我要买房</a>
+            </div>
+            <div class="col" ng-click="showFuncs(2)">
+                <a class="{{funcIndex == 2?'active':''}}">我要租房</a>
+            </div>
+            <div class="col" ng-click="showFuncs(3)">
+                <a class="{{funcIndex == 3?'active':''}}">我是房东</a>
+            </div>
+        </article>
+
+        <!--功能区域-->
+        <div class="func_box">
+            <div class="row" ng-show="funcIndex==1">
+                <div class="col">
+                    <i class="icon ion-android-map"></i>
+                    <p>买房1</p>
+                </div>
+                <div class="col">
+                    <i class="icon ion-alert"></i>
+                    <p>买房2</p>
+                </div>
+            </div>
+            <div class="row" ng-show="funcIndex==2">
+                <div class="col" ng-click="jump('list')">
+                    <i class="icon ion-android-map"></i>
+                    <p>普通租房</p>
+                </div>
+                <div class="col">
+                    <i class="icon ion-alert"></i>
+                    <p>地铁租房</p>
+                </div>
+                <div class="col">
+                    <i class="icon ion-android-attach"></i>
+                    <p>地图租房</p>
+                </div>
+            </div>
+
+
+            <div class="text"></div>
+        </div>
+
+        <!--新闻列表-->
+        <div class="list">
+            <a class="item item-thumbnail-left"
+                    ng-repeat="news in newsData">
+                <img ng-src="{{news.src}}">
+                <h2>{{news.title}}</h2>
+                <p>{{news.cnt}}</p>
+            </a>
+        </div>
+        <ion-infinite-scroll on-infinite="loadMoreNews()" distance="15%" ng-if="isHasMore">
+        </ion-infinite-scroll>
+        <p ng-show="!isHasMore">已经没有更多数据</p>
+    </div>
+</ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>

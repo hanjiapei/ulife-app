@@ -1,0 +1,13 @@
+<div class="advertise_box">
+
+    <ion-slide-box auto-play="true" show-pager="true"
+                   slide-interval="2000" does-continue="true">
+        <ion-slide ng-repeat="img in imageArray">
+            <img ng-src="{{img}}"/>
+        </ion-slide>
+    </ion-slide-box>
+
+    <p ng-click="jump('main')">跳过（{{num}}）</p>
+
+</div>
+

@@ -1,0 +1,178 @@
+html{
+    font-size:10pt;
+}
+
+body,a{
+    font:1rem 'microsoft yahei';
+    color:#333;
+}
+a{
+    text-decoration:none;
+}
+h1,h2,h3,h4{
+    color:#444;
+}
+
+/*起始页的样式*/
+.start_box{
+    width:100%;
+    height:100%;
+    background-image: url(../images/start_bg.jpg);
+    background-size: 100% 100%;
+    position:fixed;
+}
+.start_box>img{
+    display: block;
+    position:absolute;
+    width:50%;
+    left:25%;
+    top:35%;
+}
+
+/*广告页的样式*/
+.advertise_box .slider-slide{
+    padding:0;
+}
+.advertise_box .slider-slide img{
+    max-width:100%;
+}
+.advertise_box .slider-pager{
+    z-index:10000;
+    top:30px;
+}
+.advertise_box .slider-pager .slider-pager-page{
+    color:red;
+}
+/*尺寸、定位、细节*/
+.advertise_box>p{
+    width:40%;
+    height:40px;
+    line-height: 40px;
+    position:absolute;
+    z-index:20000;
+    top:60%;
+    left:30%;
+    background-color: green;
+    border-radius: 20px;
+    color:#fff;
+    font-size:14px;
+    text-align: center;
+}
+
+/*header的样式*/
+#u_header{
+    background-color: #fff;
+}
+#u_header div.col-20 .icon {
+    margin-left:5px;
+}
+#u_header .row{
+    padding:0;
+}
+#u_header .row .item-input{
+    padding:4px 0px 4px 20px;
+}
+#u_header .row .item-input input{
+    height:20px;
+}
+.left_border{
+    border-radius:0px;
+    border:0;
+    border-left:1px solid #ccc;
+}
+/*footer的样式*/
+#u_footer .tabs{
+    background-color: #fdfdfd;
+    height:35px;
+    color:#666;
+}
+#u_footer .tab-item.active{
+    color: #24ae26;
+}
+
+/*main的样式*/
+#main_box{
+    padding:5px;
+    background-image: url('../images/ind_1.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+#main_box section{
+    margin-top:60px;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+#main_box section span{
+    float:left;
+    width:70px;
+    height:30px;
+    line-height: 30px;
+    border:1px solid #eee;
+    border-radius:18px;
+    text-align: center;
+    background-color: #fff;
+}
+#main_box section span i{margin-left:5px;}
+#main_box section button{
+    float:right;
+    width:30px;
+    height:30px;
+    border:0;
+    border-radius:15px;
+    background-color: #fff;
+    font-size:1.2rem;
+}
+
+#main_box article {
+    background-color: #f9f9f9;
+    border-radius: 4px 4px 0px 0px;
+    border:1px solid #f4f4f4;
+}
+#main_box article  div.col{
+    text-align: center;
+}
+#main_box article  div.col a{
+    color:#999;
+}
+#main_box article  div.col a.active{
+    color:#666;
+    font-weight: bold;
+}
+
+#main_box .func_box{
+    border:1px solid #f5f5f5;
+    border-top:0;
+    padding-top:10px;
+    background-color: #fff;
+    box-shadow:0px 3px 3px #ddd;
+}
+
+#main_box .func_box div.col{
+    text-align: center;
+}
+
+#main_box .func_box div.col i{
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display: block;
+    margin:0px auto;
+    border-radius: 20px;
+    background-color: #eaff55;
+    font-size:1.3rem;
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
